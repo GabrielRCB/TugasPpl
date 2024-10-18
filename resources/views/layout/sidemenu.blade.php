@@ -25,7 +25,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url('/kategori')}}" class="nav-link">
+                    <a href="{{url('/customer')}}" class="nav-link">
                         <i class="nav-icon fas fas fa-cube"></i>
                         <p>
                             Customer

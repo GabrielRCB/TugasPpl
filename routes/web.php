@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -37,3 +38,13 @@ Route::group(['prefix' => 'user','middleware'=>'auth'], function () {
 });
 
 Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard.index')->middleware('auth');
+
+Route::group(['prefix' => 'customer','middleware'=>'auth'], function () {
+    Route::get('/', [CustomerController::class, 'list']);
+    Route::get('/add', [CustomerController::class, 'add']);
+    Route::get('/edit/{id}', [CustomerController::class, 'edit']);
+    Route::post('/update', [CustomerController::class, 'update']);
+    Route::post('/insert', [CustomerController::class, 'insert']);
+    Route::post('/delete', [CustomerController::class, 'delete']);
+});
+
