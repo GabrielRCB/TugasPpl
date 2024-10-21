@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
@@ -47,4 +48,14 @@ Route::group(['prefix' => 'customer','middleware'=>'auth'], function () {
     Route::post('/insert', [CustomerController::class, 'insert']);
     Route::post('/delete', [CustomerController::class, 'delete']);
 });
+
+Route::group(['prefix' => 'order', 'middleware' => 'auth'], function () {
+    Route::get('/', [OrderController::class, 'list']);
+    Route::get('/add', [OrderController::class, 'add']);
+    Route::get('/edit/{id}', [OrderController::class, 'edit']);
+    Route::post('/update', [OrderController::class, 'update']);
+    Route::post('/insert', [OrderController::class, 'insert']);
+    Route::post('/delete', [OrderController::class, 'delete']);
+});
+
 

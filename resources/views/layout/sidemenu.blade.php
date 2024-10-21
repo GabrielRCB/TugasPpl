@@ -26,15 +26,15 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{url('/customer')}}" class="nav-link">
-                        <i class="nav-icon fas fas fa-cube"></i>
+                        <i class="nav-icon fas fas fa-user"></i>
                         <p>
                             Customer
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url('/buku')}}" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
+                    <a href="{{url('/order')}}" class="nav-link">
+                        <i class="nav-icon fas fa-shopping-cart"></i>
                         <p>
                             Order
                         </p>
@@ -42,7 +42,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{url('/anggota')}}" class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
+                        <i class="nav-icon fas fa-check-circle"></i>
                         <p>
                             Status
                         </p>
