@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url('/anggota')}}" class="nav-link">
+                    <a href="{{url('/status')}}" class="nav-link">
                         <i class="nav-icon fas fa-check-circle"></i>
                         <p>
                             Status

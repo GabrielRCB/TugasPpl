@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\StatusController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -57,5 +58,15 @@ Route::group(['prefix' => 'order', 'middleware' => 'auth'], function () {
     Route::post('/insert', [OrderController::class, 'insert']);
     Route::post('/delete', [OrderController::class, 'delete']);
 });
+
+Route::group(['prefix' => 'status', 'middleware' => 'auth'], function () {
+    Route::get('/', [StatusController::class, 'list']);
+    Route::get('/add', [StatusController::class, 'add']);
+    Route::get('/edit/{id}', [StatusController::class, 'edit']);
+    Route::post('/update', [StatusController::class, 'update']);
+    Route::post('/insert', [StatusController::class, 'insert']);
+    Route::post('/delete', [StatusController::class, 'delete']);
+});
+
 
 

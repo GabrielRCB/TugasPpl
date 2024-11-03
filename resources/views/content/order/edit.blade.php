@@ -57,7 +57,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Berat (kg)</label>
-                            <input type="number" step="0.01"
+                            <input type="number" 
                                    class="form-control @error('kg') is-invalid @enderror"
                                    value="{{ old('kg', $order->kg) }}"
                                    name="kg">
