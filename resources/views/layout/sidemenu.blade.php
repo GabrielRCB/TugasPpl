@@ -49,7 +49,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url('/peminjaman')}}" class="nav-link">
+                    <a href="{{url('/transaksi')}}" class="nav-link">
                         <i class="nav-icon fas fa-exchange-alt"></i>
                         <p>
                             Transaksi

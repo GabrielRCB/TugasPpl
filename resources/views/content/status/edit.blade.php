@@ -70,18 +70,6 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Estimasi Waktu Selesai</label>
-                            <input type="time"
-                                   class="form-control @error('estimasi_waktu_selesai') is-invalid @enderror"
-                                   value="{{ old('estimasi_waktu_selesai',\Carbon\Carbon::parse($status->estimasi_waktu_selesai)->format('H:i'))}}"
-                                   name="estimasi_waktu_selesai">
-                            @error('estimasi_waktu_selesai')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                        </div>
-                        <div class="form-group">
                             <label for="">Status Pesanan</label>
                             <input type="text"
                                    class="form-control @error('status_pesanan') is-invalid @enderror"

@@ -5,6 +5,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\StatusController;
+use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -66,6 +67,15 @@ Route::group(['prefix' => 'status', 'middleware' => 'auth'], function () {
     Route::post('/update', [StatusController::class, 'update']);
     Route::post('/insert', [StatusController::class, 'insert']);
     Route::post('/delete', [StatusController::class, 'delete']);
+});
+
+Route::group(['prefix' => 'transaksi', 'middleware' => 'auth'], function () {
+    Route::get('/', [TransaksiController::class, 'list']);
+    Route::get('/add', [TransaksiController::class, 'add']);
+    Route::get('/edit/{id}', [TransaksiController::class, 'edit']);
+    Route::post('/update', [TransaksiController::class, 'update']);
+    Route::post('/insert', [TransaksiController::class, 'insert']);
+    Route::post('/delete', [TransaksiController::class, 'delete']);
 });
 
 

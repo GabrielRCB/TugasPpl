@@ -15,7 +15,6 @@ class StatusController extends Controller
             'alamat' => 'required',
             'tanggal_pesanan' => 'required|date',
             'jenis_layanan' => 'required',
-            'estimasi_waktu_selesai' => 'required|date_format:H:i',
             'status_pesanan' => 'required',
         ]);
 
@@ -25,7 +24,6 @@ class StatusController extends Controller
         $status->alamat = $request->alamat;
         $status->tanggal_pesanan = $request->tanggal_pesanan;
         $status->jenis_layanan = $request->jenis_layanan;
-        $status->estimasi_waktu_selesai = $request->estimasi_waktu_selesai;
         $status->status_pesanan = $request->status_pesanan;
         $status->save();
 
@@ -40,7 +38,6 @@ class StatusController extends Controller
             'alamat' => 'required',
             'tanggal_pesanan' => 'required|date',
             'jenis_layanan' => 'required',
-            'estimasi_waktu_selesai' => 'required|date_format:H:i',
             'status_pesanan' => 'required',
         ]);
 
@@ -54,7 +51,6 @@ class StatusController extends Controller
         $status->alamat = $request->alamat;
         $status->tanggal_pesanan = $request->tanggal_pesanan;
         $status->jenis_layanan = $request->jenis_layanan;
-        $status->estimasi_waktu_selesai = $request->estimasi_waktu_selesai;
         $status->status_pesanan = $request->status_pesanan;
         $status->save();
 

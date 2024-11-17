@@ -12,6 +12,5 @@ class Status extends Model
     protected $table = 'status';
 
 
-    protected $fillable = ['nama','no_telepon','alamat','tanggal_pesanan','jenis_layanan','estimasi_waktu_selesai',
-                           'status_pesanan',];
+    protected $fillable = ['nama','no_telepon','alamat','tanggal_pesanan','jenis_layanan','status_pesanan',];
 }
