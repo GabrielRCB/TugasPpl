@@ -10,7 +10,7 @@
           <div class="small-box bg-info">
             <div class="inner">
               <h3>Customer</h3>
-              {{-- <h2>{{$totalBuku}}</h2> --}}
+              <h2>{{$totalCustomer}}</h2>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
@@ -23,7 +23,7 @@
           <div class="small-box bg-success">
             <div class="inner">
               <h3>Order</h3>
-              {{-- <h2>{{$totalKategori}}</h2> --}}
+              <h2>{{$totalOrder}}</h2>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -37,7 +37,7 @@
             <div class="inner">
               <h3>Status</h3>
 
-              {{-- <h2>{{ $totalanggota }}</h2> --}}
+              <h2>{{ $totalStatus }}</h2>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
@@ -51,7 +51,7 @@
             <div class="inner">
               <h3>Transaksi</h3>
 
-              {{-- <h2>{{ $totalpinjam }}</h2> --}}
+              <h2>{{ $totalTransaksi }}</h2>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
@@ -65,14 +65,14 @@
 
     </div>
 
-{{-- <!-- Content Row -->
+<!-- Content Row -->
 <div class="row">
     <!-- Content Column -->
     <div class="col-lg-12 mb-4">
         <!-- Project Card Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">List Peminjaman Buku</h6>
+                <h6 class="m-0 font-weight-bold text-primary">List Pemesanan</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -80,29 +80,27 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Judul Buku</th>
-                                <th>Kategori Buku</th>
-                                <th>Nim</th>
                                 <th>Nama</th>
-                                <th>Prodi</th>
-                                <th>Tanggal Pinjam</th>
-                                <th>Tanggal Kembali</th>
+                                <th>No Telepon</th>
+                                <th>Alamat</th>
+                                <th>Tanggal Pesanan</th>
+                                <th>Jenis Layanan</th>
+                                <th>Status Pesanan</th>
                             </tr>
                         </thead>
                         <tbody>
                             @php
                                 $no = 1;
                             @endphp
-                            @foreach($latestPeminjaman as $row)
+                            @foreach($latestStatus as $row)
                                 <tr>
                                     <td>{{ $no++ }}</td>
-                                    <td>{{ $row->judul_buku }}</td>
-                                    <td>{{ $row->kategori->nama_kategori }}</td>
-                                    <td>{{ $row->nim }}</td>
                                     <td>{{ $row->nama }}</td>
-                                    <td>{{ $row->prodi }}</td>
-                                    <td>{{ $row->tgl_pinjam }}</td>
-                                    <td>{{ $row->tgl_kembali }}</td>
+                                    <td>{{ $row->no_telepon }}</td>
+                                    <td>{{ $row->alamat }}</td>
+                                    <td>{{ $row->tanggal_pesanan }}</td>
+                                    <td>{{ $row->jenis_layanan }}</td>
+                                    <td>{{ $row->status_pesanan }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -112,7 +110,7 @@
         </div>
         <!-- /.container-fluid -->
     </div>
-</div> --}}
+</div>
 
 
 @endsection
